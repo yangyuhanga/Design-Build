@@ -1,4 +1,4 @@
-<img width="182" alt="image" src="https://github.com/yangyuhanga/Design-Build/assets/131662288/0c941016-e67b-4738-aef4-619d4bd4bc60"># Design-Build
+# Design-Build
 London Queen Mary University 2021 Design &amp; Build Results
 ## IoT
 ### 数据
