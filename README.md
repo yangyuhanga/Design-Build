@@ -1,4 +1,4 @@
-# Design-Build
+<img width="182" alt="image" src="https://github.com/yangyuhanga/Design-Build/assets/131662288/0c941016-e67b-4738-aef4-619d4bd4bc60"># Design-Build
 London Queen Mary University 2021 Design &amp; Build Results
 ## IoT
 ### 数据
@@ -18,3 +18,16 @@ London Queen Mary University 2021 Design &amp; Build Results
 同时，我们对best3模型在data/valid数据集上进行评估，评估指标包括准确性、召回率、F1分数和IoU等，最终结果保存在了evaluate文件夹下。
 
 ### 模型推理
+首先按照requirements.txt文件对项目环境进行部署，
+然后修改src/IoT/demo.py文件中的imagepath的值，将其改为要推理照片的文件夹地址，
+最后运行src/IoT/inference.py脚本即可。
+
+### GUI
+为实现模型推理结果的图像化显示，我们设计了src/IoT/ObjectDetectionGUIch.java文件，
+在模型推理完毕后，只需将文件中的predictFolderPath和labelsFolderPath修改为相应的路径即可
+
+### report on the accuracy
+
+
+
+
