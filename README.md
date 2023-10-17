@@ -27,7 +27,11 @@ London Queen Mary University 2021 Design &amp; Build Results
 在模型推理完毕后，只需将文件中的predictFolderPath和labelsFolderPath修改为相应的路径即可
 
 ### report on the accuracy
-
-
-
-
+Firstly, we use Photoshop to batch process test set images,simulate bright or dark environments
+by adjusting brightness and exposure.
+For images in bright environments, our parameters are brightness 70 and exposure 0.3.
+For images in dark environments, our parameters are brightness -70 and exposure -0.3.
+We found that when the model is in a dark environment, its recognition accuracy is almost
+unaffected, but when it is in a bright environment, its recognition accuracy is slightly affected,
+indicating that the model's recognition ability can still be trained and strengthened under bright
+conditions. Overall, the model we train can adapt to various different environments.
