@@ -41,27 +41,43 @@ conditions. Overall, the model we train can adapt to various different environme
 ### Configuration
 #### A. Database Configuration:
 database.properties
+
 jdbc.url=jdbc:mysql://localhost:3306/java
+
 jdbc.username=root
+
 jdbc.password=root
+
 Please modify the corresponding information in your project to connect to the database correctly, based on your database details.
 
 #### B. Servlet Configuration:
 <!-- web.xml -->
+
 <servlet>
+  
   <servlet-name>MyServlet</servlet-name>
+  
   <servlet-class>com.example.MyServlet</servlet-class>
+  
 </servlet>
+
 <servlet-mapping>
+  
   <servlet-name>MyServlet</servlet-name>
+  
   <url-pattern>/myapp/*</url-pattern>
+  
 </servlet-mapping>
+
 Complete the Servlet configuration in the web.xml file based on your project's servlet file.
 
 #### C. Other Configuration:
 When this project was created, it was developed in the following environment:
+
 Development Environment: Eclipse IDE 2023-6
+
 Runtime Environment: Tomcat 9.0, JDK 19, MySQL 8.0
+
 Ensure compatibility with these environments when running the project.
 
 ### Database
