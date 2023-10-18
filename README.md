@@ -135,32 +135,80 @@ The project folder includes all the files for Tomcat configuration and the proje
 
 ### Explanation of Running Results (Including Functionality Description):
 
-#### Initial Interface: (Screenshot)
+#### Initial Interface:
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/429072fbbbf3c0b7216c49733fccfda.png">
+</div>
+
 Users can click buttons to access the registration and login interfaces.
 
-#### Registration Interface: (Screenshot)
+#### Registration Interface:
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/9f51e88c86a84037786324823dc7098.png">
+</div>
+
 New users can complete their registration here. Various restrictions are in place, such as preventing duplicate usernames, with pop-up notifications for errors. (Screenshot)
 
 #### Gender Error Messages:
-A: If left blank (Screenshot)
-B: If the input doesn't meet the criteria (Screenshot)
+A: If left blank 
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/f4282646f381b08f8a827297b89ee83.png">
+</div>
+
+B: If the input doesn't meet the criteria 
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/5b698733636fa7276f62fc9bb33a19c.png">
+</div>
 
 #### Password Error Messages:
-A: If left blank (Screenshot)
-B: If the input doesn't meet the criteria (Screenshot)
+A: If left blank 
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/87b7c7a2567ca56e06b8125e22a7be3.png">
+</div>
+
+B: If the input doesn't meet the criteria
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/c3a7f0a7e00f9f6dfc77c349770984c.png">
+</div>
 
 #### Similar error messages apply for other fields.
 
-#### Login Interface: (Screenshot)
+#### Login Interface:
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/94d48252183c23c6c3576dfe9a86892.png">
+</div>
+
 Registered users can log in here. If login fails, an error message is displayed. (Screenshot)
 
-#### Successful Login Interface: (Screenshot)
+#### Successful Login Interface:
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/2af3dd8f57d6a86de0c2df4b8199dab.png">
+</div>
+
 It displays the user's account and the unique ID for the small car registered to that user. It also provides access to more features of the platform. Clicking "VIEW MORE" takes you to the next interface.
 
-#### Records Interface: (Screenshot)
+#### Records Interface:
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/f376834457103dc4bc221586bc87d4a.png">
+</div>
+
 This page displays data collected after the small car's operation, including record ID, time, speed, distance, and direction. The record ID is auto-incremented and resets on each data read. Clicking the "dataread" button in the top left corner clears the data from the database and re-reads small car data to ensure data updates according to user requirements.
 
-#### Object Detection Photo Display Interface: (Screenshot)
+#### Object Detection Photo Display Interface:
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/5391ba07045bbc644c7d9aada6ab005.png">
+</div>
+
 After displaying "Detecting Objects..." on this page, a GUI interface will pop up. This is one of our team's innovations. Instead of repeatedly storing and retrieving redundant data in the database, we chose to create and display a GUI interface. This allows users to intuitively view photos, coordinates, and detected treasures from the small car's operation records. This innovation also reflects our group's interactive approach.
 
 
