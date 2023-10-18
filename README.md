@@ -211,4 +211,45 @@ This page displays data collected after the small car's operation, including rec
 
 After displaying "Detecting Objects..." on this page, a GUI interface will pop up. This is one of our team's innovations. Instead of repeatedly storing and retrieving redundant data in the database, we chose to create and display a GUI interface. This allows users to intuitively view photos, coordinates, and detected treasures from the small car's operation records. This innovation also reflects our group's interactive approach.
 
+### Tel
+#### Meeting Notes: Discussion on the Raspberry Pi-based Intelligent Car
+
+---
+
+**Host Li Yanhang:**  
+Hello everyone, our goal today is to discuss how to create an intelligent car based on Raspberry Pi. According to the requirements, the car needs to achieve functions such as obstacle avoidance, photography, color recognition, data transmission, and path recognition. I hope every member can provide suggestions and ideas on implementing these features. Let's start with Wan Chengjun.
+
+---
+
+**Wan Chengjun:**  
+Thank you, Li Yanhang. First, to implement the obstacle avoidance feature, we can use ultrasonic sensors. Ultrasonic sensors can send out ultrasonic waves and measure the time it takes for them to reflect back. By this time and the speed of the ultrasonic wave, we can calculate the distance between the object and the sensor. If the sensor detects an obstacle in front and the distance is too close, we can program the car to turn to avoid a collision.
+
+For color recognition, we can use an RGB sensor or a camera. The RGB sensor can detect the color of objects, and the camera can capture images and identify colors through image processing algorithms. For example, we can use the OpenCV library to process images captured by the camera and determine the main colors in the image.
+
+---
+
+**Wang Zihe:**  
+Thank you, Wan Chengjun. Continuing with the photography feature, it's relatively simple. We can use the Raspberry Pi's camera module. It's a compact 5MP or 8MP camera that can easily connect to the Raspberry Pi. We can write a simple Python script to control the camera to take pictures.
+
+For data transmission, Raspberry Pi already has a built-in WiFi module. We can use this module to send and receive data. For instance, the car can send photos taken to a remote server or the user's mobile phone via WiFi.
+
+---
+
+**Zhao Ran:**  
+Thank you, Wang Zihe. Path recognition is a complex but interesting issue. Initially, we can place some colored lines on the ground, such as black tape. Then, we can use the camera to capture images of the ground and use image processing algorithms to detect these lines. When the car detects the lines, it can follow them.
+
+For the challenge of navigating a maze to find treasure, we can use a simple maze-solving algorithm, like the right-hand rule. The principle is, when the car enters a maze, it always tries to follow the wall on its right. This way, the car will eventually find the exit. Of course, this is a basic method, and for more complex mazes, we might need to use more intricate algorithms.
+
+---
+
+**Gao Zihang:**  
+Thank you, Zhao Ran. Regarding the suggestion of using ultrasonic sensors to correct the travel path, I think it's an excellent idea. When the car is driving along the path, it might deviate from the course. The ultrasonic sensors can help the car detect its distance from the walls beside it. If the car veers off the path, it can adjust its direction to get back on the correct route.
+
+---
+
+**Host Li Yanhang:**  
+Thank you, everyone. We've discussed how to implement all the car's functions. The next step is to start designing and programming. I hope our car can successfully complete the maze task! Let's all do our best!
+
+---
+
 
