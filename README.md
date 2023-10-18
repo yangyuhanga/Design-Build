@@ -1,39 +1,50 @@
 # Design-Build
 London Queen Mary University 2021 Design &amp; Build Results
 ## IoT
-### 数据
+### data
 <div align="center">
   <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/8770fb4774df0b1fa465c1133db88a9.png">
 </div>
 
-#### 训练数据
-为了训练一个有效的目标检测模型，我们收集了3523张钥匙、魔方和书籍的图像，并在labellmg软件上对他进行了标注，并保存为YOLO格式。同时，我们考虑了各种环境设置、照明条件和角度，在原数据集基础上调整了这些参数，产生了明暗不同背景的版本（具体调整参数会在之后说明），以提高训练精度。训练数据保存在data/train文件夹下
+#### Training Data
+In order to train an effective object detection model, we collected 3523 images of keys, Rubik's cubes, and books. These images were annotated using the LabelImg software and saved in YOLO format. Additionally, we considered various environmental settings, lighting conditions, and angles. We adjusted these parameters on top of the original dataset to create versions with varying lighting and backgrounds (specific parameter adjustments will be explained later) to enhance training accuracy. The training data is stored in the `data/train` folder.
 
 <div align="center">
   <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/36acd09fe93305593b71b07ade0095e.png">
 </div>
 
-#### 验证数据
-验证数据集是独立于训练数据集的，我们又重新搜集了592张图片作为我们的验证集，去判断模型是否完善。验证数据保存在data/valid文件夹下
+#### Validation Data
+The validation dataset is separate from the training dataset. We gathered an additional 592 images to serve as our validation set, which helps us assess the model's performance. The validation data is stored in the `data/valid` folder. This data is used to evaluate the model's effectiveness and ensure it generalizes well to new, unseen data.
 
-### 模型训练
-我们整个过程一共训练出了三个模型，分别为best1.pt，best2.pt，best3.pt，其中best3模型效果最好，这些模型都保存在model文件夹下。
+### Model Training
+Throughout the process, we trained a total of three models, named best1.pt, best2.pt, and best3.pt. Among these models, best3.pt showed the best performance. All these models are saved in the 'model' folder.
+
 #### best1.pt
-我们以yolov8n.pt为基底模型，在data/train数据集下训练三百轮；
-#### best2.pt
-我们以yolov8x.pt为基底模型，在data/train数据集下训练三百轮；
-#### best3.pt
-我们以best2.pt为基底模型，对于best2模型的一些不足之处进行了微调；
-同时，我们对best3模型在data/valid数据集上进行评估，评估指标包括准确性、召回率、F1分数和IoU等，最终结果保存在了evaluate文件夹下。
+- We used yolov8n.pt as the base model and trained it for 300 epochs on the data from the 'train' dataset.
 
-### 模型推理
-首先按照requirements.txt文件对项目环境进行部署，
-然后修改src/IoT/demo.py文件中的imagepath的值，将其改为要推理照片的文件夹地址，
-最后运行src/IoT/inference.py脚本即可。
+#### best2.pt
+- We used yolov8x.pt as the base model and trained it for 300 epochs on the data from the 'train' dataset.
+
+#### best3.pt
+- We used best2.pt as the base model and performed fine-tuning to address some of the shortcomings of best2.
+
+Additionally, we evaluated the performance of the best3 model on the 'valid' dataset. Evaluation metrics include accuracy, recall, F1 score, IoU, and more. The final evaluation results are saved in the 'evaluate' folder.
+
+### Model Inference
+To perform model inference, follow these steps:
+
+1. Set up the project environment by installing the required dependencies listed in the 'requirements.txt' file.
+
+2. Modify the 'imagepath' value in the 'src/IoT/demo.py' file to specify the folder path containing the images you want to perform inference on.
+
+3. Run the 'src/IoT/inference.py' script.
+
+These steps will enable you to use the trained model to make predictions on the specified images in the designated folder.
 
 ### GUI
-为实现模型推理结果的图像化显示，我们设计了src/IoT/ObjectDetectionGUIch.java文件，
-在模型推理完毕后，只需将文件中的predictFolderPath和labelsFolderPath修改为相应的路径即可
+To achieve a graphical representation of the model inference results, we have designed the 'src/IoT/ObjectDetectionGUIch.java' file. After completing the model inference, simply modify the 'predictFolderPath' and 'labelsFolderPath' in the file to their respective paths.
+
+This will allow you to visualize and display the results of model predictions using the graphical user interface (GUI) provided in the 'ObjectDetectionGUIch.java' file.
 
 <div align="center">
   <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/5391ba07045bbc644c7d9aada6ab005.png">
