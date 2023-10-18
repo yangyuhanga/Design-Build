@@ -8,6 +8,11 @@ London Queen Mary University 2021 Design &amp; Build Results
 
 #### 训练数据
 为了训练一个有效的目标检测模型，我们收集了3523张钥匙、魔方和书籍的图像，并在labellmg软件上对他进行了标注，并保存为YOLO格式。同时，我们考虑了各种环境设置、照明条件和角度，在原数据集基础上调整了这些参数，产生了明暗不同背景的版本（具体调整参数会在之后说明），以提高训练精度。训练数据保存在data/train文件夹下
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/36acd09fe93305593b71b07ade0095e.png">
+</div>
+
 #### 验证数据
 验证数据集是独立于训练数据集的，我们又重新搜集了592张图片作为我们的验证集，去判断模型是否完善。验证数据保存在data/valid文件夹下
 
@@ -30,15 +35,40 @@ London Queen Mary University 2021 Design &amp; Build Results
 为实现模型推理结果的图像化显示，我们设计了src/IoT/ObjectDetectionGUIch.java文件，
 在模型推理完毕后，只需将文件中的predictFolderPath和labelsFolderPath修改为相应的路径即可
 
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/5391ba07045bbc644c7d9aada6ab005.png">
+</div>
+
 ### report on the accuracy
 Firstly, we use Photoshop to batch process test set images,simulate bright or dark environments
 by adjusting brightness and exposure.
 For images in bright environments, our parameters are brightness 70 and exposure 0.3.
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/b408ea260c46d51a8df2c7a5fb3eea1.png">
+</div>
+
 For images in dark environments, our parameters are brightness -70 and exposure -0.3.
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/80ee78d55d25b39ca9aa2c5ee2e9e63.png">
+</div>
+
 We found that when the model is in a dark environment, its recognition accuracy is almost
 unaffected, but when it is in a bright environment, its recognition accuracy is slightly affected,
 indicating that the model's recognition ability can still be trained and strengthened under bright
-conditions. Overall, the model we train can adapt to various different environments.
+conditions. 
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/4b203897ba0a925160e465504fd07e3.png">
+</div>
+
+
+Overall, the model we train can adapt to various different environments.
+
+<div align="center">
+  <img src="https://github.com/yangyuhanga/Design-Build/blob/main/pictures/713b45b6c71686cbaa75dc7e59f3327.png">
+</div>
 
 
 ## ECL
